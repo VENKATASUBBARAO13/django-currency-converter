@@ -20,12 +20,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-72%ew&b()ij=jb)^rpkp3_kif(@fu9dbwq-!(77fpb#ou++b1s'
+import os
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
+ALLOWED_HOSTS = ['*']
+import os
+
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+CSRF_TRUSTED_ORIGINS = ['https://currency-converter-swy9.onrender.com']
 
 
 # Application definition
