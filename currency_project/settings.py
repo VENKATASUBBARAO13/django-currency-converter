@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-72%ew&b()ij=jb)^rpkp3_kif(@fu9dbwq-!(77fpb#ou++b1s'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['currency-converter-swy9.onrender.com']
 
 
 # Application definition
