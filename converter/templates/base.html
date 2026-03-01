@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Currency Converter</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<!-- jQuery FIRST (VERY IMPORTANT) -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<!-- Select2 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+<!-- Select2 JS -->
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    display:flex;
+    flex-direction:column;
+}
+
+/* NAVBAR */
+
+.navbar{
+    width:100%;
+    padding:18px 60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(0,0,0,0.25);
+    backdrop-filter:blur(10px);
+}
+
+.logo{
+    color:white;
+    font-size:22px;
+    font-weight:600;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    margin-left:30px;
+    font-size:15px;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#00f5d4;
+}
+
+/* CENTER CONTENT */
+
+.container{
+    flex:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px 15px;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:20px;
+    color:white;
+    background:rgba(0,0,0,0.35);
+}
+
+footer a{
+    color:#00f5d4;
+    text-decoration:none;
+    margin:0 10px;
+}
+
+footer a:hover{
+    text-decoration:underline;
+}
+.page-transition{
+    animation:pageFade .5s ease;
+}
+
+@keyframes pageFade{
+    from{opacity:0; transform:translateY(15px);}
+    to{opacity:1; transform:translateY(0);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+    <div class="logo">💱 Currency Converter</div>
+
+    <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+    </div>
+</div>
+
+<div class="container page-transition">
+    {% block content %}{% endblock %}
+</div>
+
+<footer>
+    <h3>VENKATA SUBBARAO</h3>
+    <p>
+        <a href="https://github.com/VENKATASUBBARAO13" target="_blank">GitHub</a> |
+        <a href="https://www.linkedin.com/in/ventrapragada-venkata-subbarao" target="_blank">LinkedIn</a> |
+        <a href="mailto:venkatasubbarao1305@gmail.com">Gmail</a>
+    </p>
+</footer>
+
+</body>
+</html>

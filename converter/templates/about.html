@@ -1,0 +1,176 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<style>
+
+/* page animation */
+.about-wrapper{
+    max-width:1000px;
+    width:100%;
+    color:white;
+    text-align:center;
+    animation:fadePage 1s ease;
+}
+
+@keyframes fadePage{
+    from{opacity:0; transform:translateY(40px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+/* profile card */
+.profile-card{
+    background:rgba(255,255,255,0.08);
+    padding:50px 35px;
+    border-radius:24px;
+    backdrop-filter:blur(18px);
+    box-shadow:0 25px 80px rgba(0,0,0,.55);
+    transition:.4s;
+}
+
+.profile-card:hover{
+    transform:translateY(-6px) scale(1.01);
+}
+
+/* avatar circle */
+.avatar{
+    width:130px;
+    height:130px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#00f5d4,#0bbcd6);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:48px;
+    font-weight:bold;
+    margin:0 auto 20px;
+    box-shadow:0 0 30px #00f5d4;
+}
+
+/* headings */
+.name{
+    font-size:28px;
+    font-weight:600;
+    margin-bottom:6px;
+}
+
+.role{
+    color:#00f5d4;
+    margin-bottom:20px;
+    font-size:16px;
+}
+
+/* description */
+.bio{
+    line-height:1.8;
+    font-size:15px;
+    color:#e0e0e0;
+    margin-bottom:28px;
+}
+
+/* skills */
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:12px;
+    margin-bottom:30px;
+}
+
+.skill{
+    padding:8px 14px;
+    background:rgba(0,245,212,.15);
+    border:1px solid rgba(0,245,212,.4);
+    border-radius:50px;
+    font-size:13px;
+    transition:.3s;
+}
+
+.skill:hover{
+    background:#00f5d4;
+    color:#000;
+    transform:translateY(-2px);
+}
+
+/* buttons */
+.links{
+    display:flex;
+    justify-content:center;
+    gap:18px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:12px 22px;
+    border-radius:12px;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:500;
+    transition:.3s;
+}
+
+.github{
+    background:#111;
+    color:white;
+}
+
+.linkedin{
+    background:#0077b5;
+    color:white;
+}
+
+.gmail{
+    background:#ea4335;
+    color:white;
+}
+
+.btn:hover{
+    transform:scale(1.08);
+    box-shadow:0 0 18px rgba(0,245,212,.7);
+}
+
+</style>
+
+<div class="about-wrapper">
+
+<div class="profile-card">
+
+<div class="avatar">VS</div>
+
+<div class="name">VENKATA SUBBARAO</div>
+<div class="role">Computer Science Engineering • Final Year Student • Python Developer</div>
+
+<div class="bio">
+I am a Computer Science Engineering final year student with a strong interest in Python programming and software development. I enjoy learning new technologies and building real-world projects to improve my problem-solving skills.
+I enjoy building real-world web applications, REST APIs, and practical projects that solve real problems.
+
+Currently I am improving my skills in:
+• Django Backend Development
+• API Integration
+• Database Design (MySQL)
+• Web Application Deployment
+
+My goal is to become a professional Software Developer and work on scalable applications.
+
+</div>
+
+<div class="skills">
+<span class="skill">Python</span>
+<span class="skill">Django</span>
+<span class="skill">HTML</span>
+<span class="skill">CSS</span>
+<span class="skill">JavaScript Basics</span>
+<span class="skill">SQL</span>
+<span class="skill">REST API</span>
+<span class="skill">Git & GitHub</span>
+</div>
+
+<div class="links">
+<a class="btn github" href="https://github.com/VENKATASUBBARAO13" target="_blank">GitHub</a>
+<a class="btn linkedin" href="https://www.linkedin.com/in/ventrapragada-venkata-subbarao" target="_blank">LinkedIn</a>
+<a class="btn gmail" href="mailto:venkatasubbarao1305@gmail.com">Email Me</a>
+</div>
+
+</div>
+</div>
+
+{% endblock %}
