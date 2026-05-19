@@ -14,7 +14,7 @@ A full-stack web application built using **Python and Django** that allows users
 ---
 
 ## 🚀 Features
-- Convert currencies (USD ↔ INR)
+- Convert currencies (INR ↔ USD)
 - Clean and responsive UI
 - Publicly accessible web application
 - Cloud deployed on Render
